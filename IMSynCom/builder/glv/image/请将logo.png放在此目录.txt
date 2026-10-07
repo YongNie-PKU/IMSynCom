@@ -1,2 +1,0 @@
-请将 IMSynCom Logo 文件命名为 logo.png，并与本说明文件放在同一目录。
-页面引用路径为：image/logo.png
