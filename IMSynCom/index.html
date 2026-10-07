@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="IMSynCom — Integrated Modeling Platform for Synthetic Microbial Communities">
+  <title>IMSynCom | 合成微生物群落模拟平台</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .model-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (max-width: 1100px) {
+      .model-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .model-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="IMSynCom 首页">
+      <img class="brand-logo" src="image/logo.png" alt="北京大学 Logo">
+      <span class="brand-copy">
+        <span class="eyebrow">国家重点研发计划项目 2021YFA0910300 资助</span>
+        <span class="wordmark"><span class="wordmark-im">IM</span>SynCom</span>
+      </span>
+    </a>
+    <div class="brand-meaning" aria-label="I’m SynCom">
+      
+      <strong>“I’m SynCom”</strong>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-kicker"><i></i><span>IMSynCom</span><i></i></div>
+      <h1 id="page-title"><span style="color: #0f766e; font-weight: 800; text-decoration: underline; text-decoration-thickness: 0.12em; text-underline-offset: 0.12em;">I</span>ntegrated <span style="color: #0f766e; font-weight: 800; text-decoration: underline; text-decoration-thickness: 0.12em; text-underline-offset: 0.12em;">M</span>odeling Platform<br>for <span style="color: #0f766e; font-weight: 800; text-decoration: underline; text-decoration-thickness: 0.12em; text-underline-offset: 0.12em;">Syn</span>thetic Microbial <span style="color: #0f766e; font-weight: 800; text-decoration: underline; text-decoration-thickness: 0.12em; text-underline-offset: 0.12em;">Com</span>munities</h1>
+      <p class="hero-cn">合成微生物群落数学模拟平台</p>
+      <p class="hero-intro">从种群间相互作用到消费者—资源动力学，选择合适的模型开始构建、模拟与解析合成微生物群落</p>
+    </section>
+
+    <section class="model-section" aria-labelledby="model-heading">
+      
+
+      <div class="model-grid">
+        <a class="model-card glv-card blocks-card" href="builder/index.html" aria-label="进入图形化编程页面">
+          <div class="model-card-head">
+            <div>
+              <h3>SynCom Builder</h3>
+              <p>Graphical Programming for Building Microbial Communities</p>
+            </div>
+            <span class="model-version">v1.4</span>
+          </div>
+          <div class="model-visual">
+            <img src="builder/image/blocks.png" alt="可编程微生物群落与动力学模拟示意图">
+          </div>
+          <div class="model-content">
+            <p>无需编程，通过图形化操作构建合成微生物群落，轻松学习群落模型并模拟动态变化。</p>
+            <div class="tags" aria-label="图形化编程功能标签">
+              <span>拖放建模</span><span>相互作用网络</span><span>动态模拟</span>
+            </div>
+          </div>
+          <div class="model-footer">
+            <span class="equation">Play → Learn → Simulation</span>
+            <span class="enter">进入图形编程 <b aria-hidden="true">→</b></span>
+          </div>
+        </a>
+
+        <a class="model-card glv-card" href="gLV-v3.3/index.html" aria-label="进入 gLV 模拟页面">
+          <div class="model-card-head">
+            <div>
+                            <h3>gLV</h3>
+              <p>Generalized Lotka–Volterra Model</p>
+            </div>
+            <span class="model-version">v3.4</span>
+          </div>
+          <div class="model-visual">
+            <img src="gLV-v3.3/image/gLV.png" alt="双物种 gLV 模型示意图">
+          </div>
+          <div class="model-content">
+            <p>通过增长率、死亡率、容纳量与物种间相互作用矩阵，模拟群落种群动态与终点组成。</p>
+            <div class="tags" aria-label="gLV 功能标签">
+              <span>物种相互作用</span><span>参数拟合</span><span>随机模拟</span>
+            </div>
+          </div>
+          <div class="model-footer">
+            <span class="equation">dxᵢ/dt = rᵢxᵢ(1 − xᵢ + Σⱼ≠ᵢ aᵢⱼxⱼ) − mᵢxᵢ</span>
+            <span class="enter">进入模拟 <b aria-hidden="true">→</b></span>
+          </div>
+        </a>
+
+        <a class="model-card gcrm-card" href="gCRM-v1.8/index.html" aria-label="进入 gCRM 模拟页面">
+          <div class="model-card-head">
+            <div>
+                           <h3>gCRM</h3>
+              <p>Generalized Consumer–Resource Model</p>
+            </div>
+            <span class="model-version">v1.9</span>
+          </div>
+          <div class="model-visual">
+            <img src="gCRM-v1.8/image/gCRM.png?rev=20260721" alt="广义消费者—资源模型示意图">
+          </div>
+          <div class="model-content">
+            <p>通过消费者摄取、资源供给、代谢物生成与再利用过程，模拟多资源驱动的群落动力学。</p>
+            <div class="tags" aria-label="gCRM 功能标签">
+              <span>消费者—资源</span><span>代谢物转化</span><span>随机模拟</span>
+            </div>
+          </div>
+          <div class="model-footer">
+            <span class="equation">dNᵢ/dt = Nᵢ[Σα Gᵢα(Rα) − mᵢ]</span>
+            <span class="enter">进入模拟 <b aria-hidden="true">→</b></span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span><b>IMSynCom</b> · Integrated Modeling Platform for Synthetic Microbial Communities</span>
+    <span>所有计算均在本地浏览器中完成</span>
+  </footer>
+</body>
+</html>

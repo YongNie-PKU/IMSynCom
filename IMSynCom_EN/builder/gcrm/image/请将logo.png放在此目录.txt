@@ -1,0 +1,2 @@
+Name the IMSynCom logo file logo.png and place it in this directory.
+Page reference path: image/logo.png

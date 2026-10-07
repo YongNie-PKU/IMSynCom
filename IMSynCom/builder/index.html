@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="IMSynCom SynCom Builder：面向初学者的合成微生物群落图形化构建与模拟工具"
+    >
+    <title>IMSynCom · SynCom Builder</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <div class="builder-shell">
+      <nav class="platform-nav" aria-label="平台导航">
+        <a class="home-tag" href="../index.html">← 返回 IMSynCom 首页</a>
+        <span class="nav-platform-name">Integrated Modeling Platform for Synthetic Microbial Communities</span>
+      </nav>
+
+      <header class="builder-header">
+        <div class="brand">
+          <div class="logo-wrap">
+            <img src="image/logo.png" alt="IMSynCom Logo">
+          </div>
+          <div>
+            <p class="platform-name">IMSynCom · 合成微生物群落模拟平台</p>
+            <h1>SynCom Builder-面向初学者的图形化建模工具</h1>
+            <p class="subtitle">图形化编程学习群落构建与模拟</p>
+            <div class="funding-line">
+              国家重点研发计划项目2021YFA0910300资助
+            </div>
+          </div>
+        </div>
+        <div class="header-copy">
+         
+        </div>
+      </header>
+
+      <section class="model-switcher" aria-labelledby="switcher-title">
+        <div class="switcher-intro">
+          <div>
+            <h2 id="switcher-title">选择群落建模框架</h2>
+          </div>
+          <p id="model-description">
+            通过物种间促进或抑制关系构建群落，适合学习种间相互作用与群落动态。
+          </p>
+        </div>
+
+        <div class="model-tabs" role="tablist" aria-label="图形编程模型">
+          <button
+            class="model-tab active"
+            id="tab-glv"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-glv"
+            data-model="glv"
+          >
+            <span class="tab-code">gLV</span>
+            <span class="tab-text">
+              <strong>从选择物种与物种间相互作用开始</strong>
+              <small>基于gLV模型</small>
+              <span class="tab-equation">
+                dx<sub>i</sub>/dt = x<sub>i</sub>{r<sub>i</sub>[1 − x<sub>i</sub> + Σ<sub>j≠i</sub>a<sub>ij</sub>x<sub>j</sub>] − m<sub>i</sub>} + D<sub>i</sub>
+              </span>
+            </span>
+            <span class="tab-version">v1.4</span>
+          </button>
+          <button
+            class="model-tab"
+            id="tab-gcrm"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-gcrm"
+            data-model="gcrm"
+          >
+            <span class="tab-code">gCRM</span>
+            <span class="tab-text">
+              <strong>从选择物种及其物质代谢开始</strong>
+              <small>基于微生物消费者-资源模型</small>
+              <span class="tab-equation">
+                u<sub>iα</sub> = c<sub>iα</sub>Q<sub>α</sub><br>
+                dQ<sub>β</sub>/dt = −Σ<sub>i</sub>X<sub>i</sub>u<sub>iβ</sub> + Σ<sub>i,α≠β</sub>D<sub>iβα</sub>X<sub>i</sub>u<sub>iα</sub>
+              </span>
+            </span>
+            <span class="tab-version">v1.4</span>
+          </button>
+        </div>
+      </section>
+
+      <main class="model-stage">
+        <section
+          class="model-panel active"
+          id="panel-glv"
+          role="tabpanel"
+          aria-labelledby="tab-glv"
+        >
+          <iframe
+            title="Blocks gLV 图形化编程器"
+            src="./glv/index.html"
+            loading="eager"
+          ></iframe>
+        </section>
+        <section
+          class="model-panel"
+          id="panel-gcrm"
+          role="tabpanel"
+          aria-labelledby="tab-gcrm"
+          hidden
+        >
+          <iframe
+            title="Blocks gCRM 图形化编程器"
+            src="./gcrm/index.html"
+            loading="eager"
+          ></iframe>
+        </section>
+      </main>
+    </div>
+    <script defer src="./assets/js/app.js"></script>
+  </body>
+</html>

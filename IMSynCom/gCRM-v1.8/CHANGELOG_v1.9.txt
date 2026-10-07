@@ -1,0 +1,15 @@
+IMSynCom gCRM v1.9
+
+1. Added the binary utilization matrix A_iα. Users first specify whether consumer i
+   utilizes substance Rα; c_iα, K_iα, and Y_iα are enabled only for active links.
+2. Added the binary production tensor P_iβα. Users first specify whether uptake of
+   input Rα by consumer i produces output Rβ; D_iβα is enabled only for active paths.
+3. Inactive utilization and production paths are treated as zero in simulation and
+   are exported as Use_* = 0 or Produce_* = 0 in CSV files.
+4. Random simulation now samples utilization structure before c/K/Y and samples
+   production structure before D. Both structures can alternatively be fixed to the
+   current manually defined network.
+5. Added configurable utilization and production probabilities, with an optional
+   safeguard that ensures each consumer utilizes at least one substance.
+6. Increased the standalone gCRM resource limit from 20 to 30.
+

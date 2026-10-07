@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="IMSynCom Blocks: Normalized Logistic gLV Visual Microbial Community Model Builder">
+    <title>IMSynCom Blocks · gLV v1.4</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script defer src="./assets/js/app.js"></script>
+    <script>
+      (() => {
+        const syncIntegratedNavigation = () => {
+          const home = document.querySelector(".home-tag");
+          const logo = document.querySelector(".brand-logo");
+          if (home) {
+            home.href = "../../index.html";
+            home.target = "_top";
+          }
+          if (logo && logo.getAttribute("src") !== "../../image/logo.png") {
+            logo.src = "../../image/logo.png";
+          }
+        };
+        new MutationObserver(syncIntegratedNavigation).observe(document.body, {
+          childList: true,
+          subtree: true
+        });
+        syncIntegratedNavigation();
+      })();
+    </script>
+  </body>
+</html>

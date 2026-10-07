@@ -1,0 +1,11 @@
+IMSynCom Blocks gCRM v1.4
+
+1. Keep the relative directory structure of index.html, assets, and image unchanged.
+2. Name the logo logo.png and place it in the image directory.
+3. Double-click index.html to run it offline in Chrome, Edge, or Firefox.
+4. The canvas supports species, resource, and metabolite nodes; metabolites are represented as triangles.
+5. An ‘uptake/growth’ edge points from a resource or metabolite to a species and has parameters c and Y.
+6. A ‘resource transformation’ edge points from a species to an output metabolite; the parameter panel on the right lists all input resources or metabolites connected to that species through uptake edges.
+7. A separate transformation yield D_iβα can be specified for each input Q_α. The corresponding production flux is D_iβα X_i u_iα; total production of the same product is the sum of fluxes from all inputs, and metabolites cannot be produced independently of substrate uptake.
+8. Bidirectional edges are automatically drawn on opposite sides of the connection and do not overlap.
+9. After simulation, the page displays species dynamics, endpoint biomass, a relative-abundance pie chart, and endpoint resource/metabolite concentrations.

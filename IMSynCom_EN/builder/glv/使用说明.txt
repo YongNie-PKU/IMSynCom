@@ -1,0 +1,27 @@
+IMSynCom Blocks gLV Visual Model Builder v1.4
+
+Instructions
+1. Extract the complete archive and keep the directory structure unchanged.
+2. Name the logo image logo.png and place it in the image directory.
+3. Double-click index.html and open it in Chrome, Edge, or Firefox.
+4. This tool requires neither an internet connection nor installation of a runtime environment.
+
+v1.4 Updates
+- Added the external species-pool immigration term D_i to the normalized gLV equation.
+- D_i can be specified separately for each species; an external-input arrow is displayed when D_i > 0.
+- Model import/export preserves D_i; older JSON files without D_i are read with D_i = 0.
+
+v1.3 Updates
+- The top logo is loaded consistently from image/logo.png.
+- Default species names were changed to ‘Species 1, Species 2, Species 3’.
+- Parameters on the right display indices for the current species, e.g., x1(0), r1, m1, and K1.
+- Interaction parameters display indices based on target and source species; for example, the effect of Species 2 on Species 1 is shown as a12.
+- Fixed incorrect spacing between parameter symbols and subscripts.
+- Changed endpoint relative abundance to a pie chart while retaining actual biomass and percentage legends.
+
+Model
+dx_i/dt = x_i {r_i[1-x_i + sum(j!=i) a_ij x_j] - m_i} + D_i
+x_i = B_i/K_i
+
+Relative Abundance
+p_i = K_i x_i / sum_j(K_j x_j)

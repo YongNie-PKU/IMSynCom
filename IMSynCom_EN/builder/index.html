@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="IMSynCom SynCom Builder: a visual tool for constructing and simulating synthetic microbial communities"
+    >
+    <title>IMSynCom · SynCom Builder</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <div class="builder-shell">
+      <nav class="platform-nav" aria-label="Platform navigation">
+        <a class="home-tag" href="../index.html">← Back to IMSynCom Home</a>
+        <span class="nav-platform-name">Integrated Modeling Platform for Synthetic Microbial Communities</span>
+      </nav>
+
+      <header class="builder-header">
+        <div class="brand">
+          <div class="logo-wrap">
+            <img src="image/logo.png" alt="IMSynCom Logo">
+          </div>
+          <div>
+            <p class="platform-name">IMSynCom · Synthetic Microbial Community Simulation Platform</p>
+            <h1>SynCom Builder-Visual Modeling Tool for Beginners</h1>
+            <p class="subtitle">Learn community construction and simulation through visual programming</p>
+            <div class="funding-line">
+              Supported by the National Key R&D Program of China (2021YFA0910300)
+            </div>
+          </div>
+        </div>
+        <div class="header-copy">
+         
+        </div>
+      </header>
+
+      <section class="model-switcher" aria-labelledby="switcher-title">
+        <div class="switcher-intro">
+          <div>
+            <h2 id="switcher-title">Select a Community Modeling Framework</h2>
+          </div>
+          <p id="model-description">
+            Construct communities through facilitative or inhibitory interspecies relationships to explore species interactions and community dynamics.
+          </p>
+        </div>
+
+        <div class="model-tabs" role="tablist" aria-label="Visual programming models">
+          <button
+            class="model-tab active"
+            id="tab-glv"
+            type="button"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-glv"
+            data-model="glv"
+          >
+            <span class="tab-code">gLV</span>
+            <span class="tab-text">
+              <strong>Start by selecting species and interspecies interactions</strong>
+              <small>Based on the gLV model</small>
+              <span class="tab-equation">
+                dx<sub>i</sub>/dt = x<sub>i</sub>{r<sub>i</sub>[1 − x<sub>i</sub> + Σ<sub>j≠i</sub>a<sub>ij</sub>x<sub>j</sub>] − m<sub>i</sub>} + D<sub>i</sub>
+              </span>
+            </span>
+            <span class="tab-version">v1.4</span>
+          </button>
+          <button
+            class="model-tab"
+            id="tab-gcrm"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-gcrm"
+            data-model="gcrm"
+          >
+            <span class="tab-code">gCRM</span>
+            <span class="tab-text">
+              <strong>Start by selecting species and their resource metabolism</strong>
+              <small>Based on a microbial consumer–resource model</small>
+              <span class="tab-equation">
+                u<sub>iα</sub> = c<sub>iα</sub>Q<sub>α</sub><br>
+                dQ<sub>β</sub>/dt = −Σ<sub>i</sub>X<sub>i</sub>u<sub>iβ</sub> + Σ<sub>i,α≠β</sub>D<sub>iβα</sub>X<sub>i</sub>u<sub>iα</sub>
+              </span>
+            </span>
+            <span class="tab-version">v1.4</span>
+          </button>
+        </div>
+      </section>
+
+      <main class="model-stage">
+        <section
+          class="model-panel active"
+          id="panel-glv"
+          role="tabpanel"
+          aria-labelledby="tab-glv"
+        >
+          <iframe
+            title="Blocks gLV Visual Programmer"
+            src="./glv/index.html"
+            loading="eager"
+          ></iframe>
+        </section>
+        <section
+          class="model-panel"
+          id="panel-gcrm"
+          role="tabpanel"
+          aria-labelledby="tab-gcrm"
+          hidden
+        >
+          <iframe
+            title="Blocks gCRM Visual Programmer"
+            src="./gcrm/index.html"
+            loading="eager"
+          ></iframe>
+        </section>
+      </main>
+    </div>
+    <script defer src="./assets/js/app.js"></script>
+  </body>
+</html>

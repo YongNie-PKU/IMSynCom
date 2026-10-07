@@ -1,0 +1,1 @@
+Name the IMSynCom logo logo.png and place it in this image directory.
